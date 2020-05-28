@@ -13,7 +13,7 @@ import cucumber.api.java.en.Then;
 
 public class pdp_Gmail_Login_Paid_User_11 extends Set {
 
-	WebDriverWait wait = new WebDriverWait(driver,30);
+	WebDriverWait wait = new WebDriverWait(driver,50);
 	
 	@Given("^user is already on pdp page CD xi$")
 	public void user_is_already_on_pdp_page_CD_xi() throws Throwable {
@@ -92,6 +92,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 
 	@Then("^user download the product xi$")
 	public void user_download_the_product_xi() throws Throwable {
+		driver.get("https://www.slideteam.net/business-process-evaluation-powerpoint-show.html");
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
 		Thread.sleep(2000);
