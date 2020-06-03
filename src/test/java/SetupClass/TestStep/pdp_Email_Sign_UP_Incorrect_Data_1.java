@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -17,6 +18,7 @@ import cucumber.api.java.en.Then;
 public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	
 	@Given("^user is already on PDP Page FP i$")
@@ -31,6 +33,7 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 	public void user_click_on_Download_button_to_download_the_product_i() throws Throwable {
 	   
 		WebElement download_btn_pdp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp);
 		Thread.sleep(2000);
 		download_btn_pdp.click();
 		Thread.sleep(2000);
@@ -206,7 +209,9 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 		 
 		driver.findElement(By.cssSelector("li.product:nth-child(1) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("#clicking")).click();
+		WebElement down_load= driver.findElement(By.cssSelector("#clicking"));
+		js.executeScript("arguments[0].scrollIntoView();", down_load);
+		down_load.click();
 		Thread.sleep(3000);
 	   driver.get("https://www.slideteam.net/");
 	   Thread.sleep(3000);
@@ -252,10 +257,12 @@ try {
 
 
 		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
-		 delete_account.click();
+		js.executeScript("arguments[0].scrollIntoView();",delete_account);
+		delete_account.click();
 		 Thread.sleep(3000);
 		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"deleteaccount-form\"]/button[1]")));
-		 continue_delete.click();
+		js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
+		continue_delete.click();
 		 Thread.sleep(3000);
 		
 		
