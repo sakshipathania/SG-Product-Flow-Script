@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.PendingException;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.Then;
 public class pdp_Gmail_Login_Paid_User_11 extends Set {
 
 	WebDriverWait wait = new WebDriverWait(driver,50);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on pdp page CD xi$")
 	public void user_is_already_on_pdp_page_CD_xi() throws Throwable {
@@ -95,6 +97,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 		driver.get("https://www.slideteam.net/business-process-evaluation-powerpoint-show.html");
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
