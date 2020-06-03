@@ -29,6 +29,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	public void user_click_on_Download_button_to_download_the_product_xi() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='clicking']")));
+		js.executeScript("arguments[0].scrollIntoView();", download_btn_pdp_fp);
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(4000);
