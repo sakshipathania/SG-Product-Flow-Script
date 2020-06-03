@@ -26,6 +26,7 @@ public class pdp_Email_Login_Correct_Data_Free_User_14 extends Set{
 	public void user_click_on_Download_button_to_download_the_product_xiv() throws Throwable {
 
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
@@ -59,6 +60,7 @@ public class pdp_Email_Login_Correct_Data_Free_User_14 extends Set{
 	@Then("^user is reedirected to same pdp page and download the product xiv$")
 	public void user_is_reedirected_to_same_pdp_page_and_download_the_product_xiv() throws Throwable {
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
