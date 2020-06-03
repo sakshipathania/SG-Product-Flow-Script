@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.Then;
 public class pdp_Gmail_Sign_UP_5 extends Set{
 	
 	WebDriverWait wait = new WebDriverWait(driver,30);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@Given("^user is already on pdp page v$")
 	public void user_is_already_on_pdp_page_v() throws Throwable {
@@ -27,6 +29,7 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 	public void user_click_on_Download_button_to_download_the_product_v() throws Throwable {
 	    
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
@@ -100,7 +103,9 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 	    
 		
 		driver.get("https://www.slideteam.net/prod-development-and-program-management.html");
-		driver.findElement(By.id("clicking")).click();
+		WebElement Down_load= driver.findElement(By.id("clicking"));
+		js.executeScript("arguments[0].scrollIntoView();",Down_load);
+		Down_load.click();
 		Thread.sleep(5000);
 		driver.get("https://www.slideteam.net/");
 		Thread.sleep(4500);
@@ -144,11 +149,13 @@ try {
 
         Thread.sleep(3000);
 		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
+		js.executeScript("arguments[0].scrollIntoView();",delete_account);
 		 Thread.sleep(1000);
 		 delete_account.click();
 		 Thread.sleep(3000);
 		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"deleteaccount-form\"]/button[1]")));
-		 continue_delete.click();
+		js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
+		continue_delete.click();
 		 Thread.sleep(9000);
 	
 		 Thread.sleep(3000);
