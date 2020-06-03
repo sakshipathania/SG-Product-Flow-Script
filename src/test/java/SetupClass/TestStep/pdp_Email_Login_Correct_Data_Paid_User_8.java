@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -13,6 +14,7 @@ import cucumber.api.java.en.Then;
 public class pdp_Email_Login_Correct_Data_Paid_User_8 extends Set {
 
 	WebDriverWait wait = new WebDriverWait(driver,50);
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on PDP Page MD viii$")
 	public void user_is_already_on_PDP_Page_MD_viii() throws Throwable {
@@ -26,6 +28,7 @@ public class pdp_Email_Login_Correct_Data_Paid_User_8 extends Set {
 	public void user_click_on_Download_button_to_download_the_product_viii() throws Throwable {
 	    
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
@@ -66,6 +69,7 @@ public class pdp_Email_Login_Correct_Data_Paid_User_8 extends Set {
 	public void user_download_the_product_viii() throws Throwable {
 	    
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
 		Thread.sleep(2000);
 		download_btn_pdp_fp.click();
 		Thread.sleep(2000);
