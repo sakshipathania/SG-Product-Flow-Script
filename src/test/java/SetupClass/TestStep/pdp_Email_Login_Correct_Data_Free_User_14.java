@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -13,6 +14,7 @@ import cucumber.api.java.en.Then;
 public class pdp_Email_Login_Correct_Data_Free_User_14 extends Set{
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on PDP Page MD xiv$")
 	public void user_is_already_on_PDP_Page_MD_xiv() throws Throwable {
