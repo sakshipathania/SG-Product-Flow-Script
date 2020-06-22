@@ -66,11 +66,11 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 			
 		 
 		Thread.sleep(4500);
-		WebElement gmail_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("identifierId")));
+		WebElement gmail_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='identifierId']")));
 		Thread.sleep(2000);
 	    gmail_email.sendKeys("sakshi.pathania@slidetech.in");
 	    Thread.sleep(2000);
-	    WebElement next_1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#identifierNext > span:nth-child(3) > span:nth-child(1)")));
+	    WebElement next_1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/span/span")));
 	    Thread.sleep(2000);
 	    next_1.click();
 	    Thread.sleep(2000);
@@ -78,7 +78,8 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	    Thread.sleep(2000);
 	    gmail_pass.sendKeys("Qwerty@1");
 	    Thread.sleep(2000);
-	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#passwordNext > span:nth-child(3)")));
+	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/span/span")));
+	    //Thread.sleep(2000);
 	    Thread.sleep(2000);
 	    next_2.click();
 	    Thread.sleep(2000);
