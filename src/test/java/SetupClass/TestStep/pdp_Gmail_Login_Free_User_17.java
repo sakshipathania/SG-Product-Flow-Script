@@ -75,7 +75,7 @@ public class pdp_Gmail_Login_Free_User_17 extends Set {
 	    Thread.sleep(2000);
 	    gmail_pass.sendKeys("Himanshi@123");
 	    Thread.sleep(2000);
-	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("#submit")));
+	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#submit")));
 	    Thread.sleep(2000);
 	    next_2.click();
 	    Thread.sleep(2000);
