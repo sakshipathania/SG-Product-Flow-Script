@@ -13,7 +13,7 @@ import cucumber.api.java.en.Then;
 
 public class pdp_Gmail_Login_Free_User_17 extends Set {
 	
-	WebDriverWait wait = new WebDriverWait(driver,50);
+	WebDriverWait wait = new WebDriverWait(driver,60);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on pdp page FP xvii$")
