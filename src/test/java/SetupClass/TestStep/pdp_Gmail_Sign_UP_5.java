@@ -68,7 +68,7 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 		Thread.sleep(2000);
 	    gmail_email.sendKeys("slidetech.qa@gmail.com");
 	    Thread.sleep(2000);
-	    WebElement next_1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/span/span")));
+	    WebElement next_1 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#next")));
 	    Thread.sleep(2000);
 	    next_1.click();
 	    Thread.sleep(2000);
@@ -76,7 +76,7 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 	    Thread.sleep(2000);
 	    gmail_pass.sendKeys("Himanshi@123");
 	    Thread.sleep(2000);
-	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/span/span")));
+	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#submit")));
 	    Thread.sleep(2000);
 	    next_2.click();
 	    Thread.sleep(8000);
