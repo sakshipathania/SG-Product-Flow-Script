@@ -14,7 +14,7 @@ import cucumber.api.java.en.Then;
 
 public class pdp_Gmail_Sign_UP_5 extends Set{
 	
-	WebDriverWait wait = new WebDriverWait(driver,30);
+	WebDriverWait wait = new WebDriverWait(driver,50);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@Given("^user is already on pdp page v$")
