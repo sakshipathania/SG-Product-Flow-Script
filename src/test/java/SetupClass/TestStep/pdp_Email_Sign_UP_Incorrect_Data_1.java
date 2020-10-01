@@ -195,11 +195,16 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 	public void user_is_redirected_to_pricing_page_And_then_user_navigates_to_free_ppt_page_i() throws Throwable {
 	
 		// go to free ppt page
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free PPTs')]")));
 		Thread.sleep(2000);
 	    free_ppt_btn.click();
-		Thread.sleep(1000);
+		Thread.sleep(1000);*/
+		Thread.sleep(5000);
+		Actions actions = new Actions(driver);
+		WebElement free_ppt_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Free Stuff")));
+		actions.moveToElement(free_ppt_btn1).moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Free PPTs')]"))).click().build().perform();
+		Thread.sleep(7000);
 		
 	}
 
@@ -207,7 +212,8 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 	public void user_downloads_a_free_product_i() throws Throwable {
 	   
 		 
-		driver.findElement(By.cssSelector("li.product:nth-child(1) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
+		//driver.findElement(By.cssSelector("li.product:nth-child(1) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
+		driver.get("https://www.slideteam.net/5-stages-of-the-formal-business-process-powerpoint-templates-ppt-presentation-slides-812.html");
 		Thread.sleep(3000);
 		WebElement down_load= driver.findElement(By.cssSelector("#clicking"));
 		js.executeScript("arguments[0].scrollIntoView();", down_load);
