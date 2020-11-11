@@ -40,7 +40,7 @@ public class pdp_Email_Login_Correct_Data_Paid_User_8 extends Set {
 
 	@Then("^user is redirected to Login page viii$")
 	public void user_is_redirected_to_Login_page_viii() throws Throwable {
-	   
+	   Thread.sleep(3000);
 	}
 
 	@Then("^user login with correct details viii$")
@@ -65,7 +65,7 @@ public class pdp_Email_Login_Correct_Data_Paid_User_8 extends Set {
 
 	@Then("^user will be redirected to same pdp page viii$")
 	public void user_will_be_redirected_to_same_pdp_page_viii() throws Throwable {
-	   
+	   Thread.sleep(2000);
 	}
 
 	@Then("^user download the product viii$")
