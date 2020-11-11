@@ -78,13 +78,14 @@ public class pdp_Facebook_Login_Paid_User_15 extends Set {
 	@Then("^user will be redirected to same page  xv$")
 	public void user_will_be_redirected_to_same_page_xv() throws Throwable {
 	    Thread.sleep(2000);
-
+         driver.get("https://www.slideteam.net/adm-risk-monitoring-and-management-techniques-2018.html");
+		Thread.sleep(2000);
 	}
 
 	@Then("^user download the product xv$")
 	public void user_download_the_product_xv() throws Throwable {
 	    Thread.sleep(1000);
-
+           
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
 		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
 		Thread.sleep(2000);
