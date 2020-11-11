@@ -19,40 +19,19 @@ public class pdp_Email_Login_Incorrect_Data_Paid_User_7 extends Set{
 
 	@Given("^user is already on PDP Page MD vii$")
 	public void user_is_already_on_PDP_Page_MD_vii() throws Throwable {
-		//driver.get("https://www.slideteam.net/slides-for-a-startup-pitch-deck-powerpoint-presentation-slides.html");
+		driver.get("https://www.slideteam.net/slides-for-a-startup-pitch-deck-powerpoint-presentation-slides.html");
 		Thread.sleep(2000);
-	    driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		log.info("It's opening the website URL");
-		Thread.sleep(1000);
-		try {
-			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
-			if (logout.isEnabled()) {
-				logout.click();
-				Thread.sleep(8000);
-				driver.navigate().refresh();
-				Thread.sleep(2000);
-			}
-		} catch (NoSuchElementException Ext) {
-
-		}
-		try {
-			driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
-			Thread.sleep(2000);
-			log.info("It's opening the website URL and redirect user to sign in page");
-		} 
-		catch (NoSuchElementException popup) {
-		}
+	    
 	}
 
 	@Then("^User click on Download button to download the product vii$")
 	public void user_click_on_Download_button_to_download_the_product_vii() throws Throwable {
 	    
-		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
-		//js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
-		//Thread.sleep(2000);
-		//download_btn_pdp_fp.click();
-		//Thread.sleep(2000);
+		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
+		Thread.sleep(2000);
+		download_btn_pdp_fp.click();
+		Thread.sleep(2000);
 		
 	}
 
