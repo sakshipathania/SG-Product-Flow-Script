@@ -20,30 +20,19 @@ public class pdp_Facebook_Login_Paid_User_15 extends Set {
 	@Given("^user is already on pdp page FP xv$")
 	public void user_is_already_on_pdp_page_FP_xv() throws Throwable {
 	    
-		//driver.get("https://www.slideteam.net/adm-risk-monitoring-and-management-techniques-2018.html");
-		//Thread.sleep(2000);
-		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		log.info("It's opening the website URL");
-		Thread.sleep(5000);
-
-		try {
-			driver.findElement(By.cssSelector("div.social-login-authentication-channel:nth-child(3) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();
-			Thread.sleep(2000);
-			log.info("It's opening the website URL");
-		} 
-		catch (NoSuchElementException popup) {
-		}
+		driver.get("https://www.slideteam.net/adm-risk-monitoring-and-management-techniques-2018.html");
+		Thread.sleep(2000);
+		
 	}
 
 	@Then("^User click on Download button to download the product xv$")
 	public void user_click_on_Download_button_to_download_the_product_xv() throws Throwable {
 		
-		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
-		//js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
-		//Thread.sleep(2000);
-		//download_btn_pdp_fp.click();
-		//Thread.sleep(2000);
+		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
+		Thread.sleep(2000);
+		download_btn_pdp_fp.click();
+		Thread.sleep(2000);
 	    
 	}
 
