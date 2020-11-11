@@ -20,19 +20,40 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 	@Given("^user is already on pdp page v$")
 	public void user_is_already_on_pdp_page_v() throws Throwable {
 	    
-		driver.get("https://www.slideteam.net/bar-graphs-and-pie-charts-sale-business-powerpoint-templates-themes.html");
+		//driver.get("https://www.slideteam.net/bar-graphs-and-pie-charts-sale-business-powerpoint-templates-themes.html");
 		Thread.sleep(2000);
-		 
+		 driver.get(AppURL);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		log.info("It's opening the website URL");
+		Thread.sleep(1000);
+		driver.get("https://www.slideteam.net/");
+		Thread.sleep(2000);
+		
+		/*try {
+			// click on sign in with google button on home page
+			driver.findElement(By.xpath("//a[contains(text(),'Sign in with Google')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Sign in with Google')]")).click();
+			//driver.findElement(By.className("btn btn-block btn-social btn-google social-btn")).click();
+			//Thread.sleep(1000);
+			//driver.get("https://mail.google.com");
+			Thread.sleep(1000);
+			log.info("It's opening the website URL");
+		} 
+		catch (NoSuchElementException popup) {
+		}*/
+		
+		
 	}
 
 	@Then("^User click on Download button to download the product v$")
 	public void user_click_on_Download_button_to_download_the_product_v() throws Throwable {
 	    
-		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
-		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
+		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		//js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
+		//Thread.sleep(2000);
+		//download_btn_pdp_fp.click();
 		Thread.sleep(2000);
-		download_btn_pdp_fp.click();
-		Thread.sleep(2000);
+		
 		
 	}
 
