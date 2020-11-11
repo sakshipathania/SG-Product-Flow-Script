@@ -18,7 +18,7 @@ public class pdp_Email_Login_Incorrect_Data_Free_User_13 extends Set {
 	@Given("^user is already on PDP Page NA xiii$")
 	public void user_is_already_on_PDP_Page_NA_xiii() throws Throwable {
 		
-		//driver.get("https://www.slideteam.net/papa-johns-company-profile-overview-financials-and-statistics-from-2014-2018.html");
+		driver.get("https://www.slideteam.net/papa-johns-company-profile-overview-financials-and-statistics-from-2014-2018.html");
 		Thread.sleep(3000);
 		
 	}
@@ -26,23 +26,11 @@ public class pdp_Email_Login_Incorrect_Data_Free_User_13 extends Set {
 	@Then("^User click on Download button to download the product xiii$")
 	public void user_click_on_Download_button_to_download_the_product_xiii() throws Throwable {
 		Thread.sleep(1000);
-		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
-		//js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
-		//Thread.sleep(2000);
-		//download_btn_pdp_fp.click();
-		driver.get(AppURL);
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		log.info("It's opening the website URL");
-		Thread.sleep(1000);
-	    
-		try {
-			driver.findElement(By.cssSelector(".authorization-link > a:nth-child(1)")).click();
-			Thread.sleep(2000);
-			log.info("It's opening the website URL");
-		} 
-		catch (NoSuchElementException popup) {
-		}
-	    
+		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
+		Thread.sleep(2000);
+		download_btn_pdp_fp.click();
+		
 		Thread.sleep(2000);
 	}
 
