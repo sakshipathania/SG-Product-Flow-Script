@@ -88,6 +88,8 @@ public class pdp_Facebook_Sign_UP_3 extends Set {
 	@Then("^user go to free ppts page  iii$")
 	public void user_go_to_free_ppts_page_iii() throws Throwable {
 		Thread.sleep(1000);
+		driver.get("https://www.slideteam.net/lego-bricks-with-different-structure-and-colours.html");
+		Thread.sleep(3000);
 	}
 
 	@Then("^user download a free ppt  iii$")
