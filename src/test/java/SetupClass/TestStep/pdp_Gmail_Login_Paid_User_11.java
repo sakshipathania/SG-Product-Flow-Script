@@ -20,7 +20,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	@Given("^user is already on pdp page CD xi$")
 	public void user_is_already_on_pdp_page_CD_xi() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		driver.get("https://www.slideteam.net/complete-powerpoint-decks-presentations/change-management-powerpoint-presentation-slides.html");
+		//driver.get("https://www.slideteam.net/complete-powerpoint-decks-presentations/change-management-powerpoint-presentation-slides.html");
 		Thread.sleep(1000);
 
 	}
@@ -28,10 +28,10 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	@Then("^User click on Download button to download the product xi$")
 	public void user_click_on_Download_button_to_download_the_product_xi() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='clicking']")));
-		js.executeScript("arguments[0].scrollIntoView();", download_btn_pdp_fp);
-		Thread.sleep(2000);
-		download_btn_pdp_fp.click();
+		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='clicking']")));
+		//js.executeScript("arguments[0].scrollIntoView();", download_btn_pdp_fp);
+		//Thread.sleep(2000);
+		//download_btn_pdp_fp.click();
 		Thread.sleep(4000);
 	 
 	}
@@ -90,6 +90,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	public void user_will_be_redirected_to_same_page_pdpd_xi() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		 Thread.sleep(2000);
+		
 		 driver.navigate().refresh();
 
 	}
@@ -97,6 +98,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	@Then("^user download the product xi$")
 	public void user_download_the_product_xi() throws Throwable {
 		driver.get("https://www.slideteam.net/business-process-evaluation-powerpoint-show.html");
+		Thread.sleep(3000);
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
 		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);	
