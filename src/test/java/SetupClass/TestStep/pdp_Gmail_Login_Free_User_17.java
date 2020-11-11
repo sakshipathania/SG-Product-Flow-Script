@@ -18,17 +18,17 @@ public class pdp_Gmail_Login_Free_User_17 extends Set {
 	
 	@Given("^user is already on pdp page FP xvii$")
 	public void user_is_already_on_pdp_page_FP_xvii() throws Throwable {
-		//driver.get("https://www.slideteam.net/bar-graphs-and-pie-charts-sale-business-powerpoint-templates-themes.html");
+		driver.get("https://www.slideteam.net/bar-graphs-and-pie-charts-sale-business-powerpoint-templates-themes.html");
 		Thread.sleep(3000);
 	}
 
 	@Then("^User click on Download button to download the product xvii$")
 	public void user_click_on_Download_button_to_download_the_product_xvii() throws Throwable {
 		
-		//WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
-		////js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
+		WebElement download_btn_pdp_fp = wait.until(ExpectedConditions.elementToBeClickable(By.id("clicking")));
+		js.executeScript("arguments[0].scrollIntoView();",download_btn_pdp_fp);
 		Thread.sleep(2000);
-		//download_btn_pdp_fp.click();
+		download_btn_pdp_fp.click();
 		Thread.sleep(4000);
 	    
 	}
