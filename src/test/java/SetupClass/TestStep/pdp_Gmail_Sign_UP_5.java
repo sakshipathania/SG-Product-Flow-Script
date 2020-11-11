@@ -29,7 +29,7 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 		driver.get("https://www.slideteam.net/");
 		Thread.sleep(2000);
 		
-		/*try {
+		try {
 			// click on sign in with google button on home page
 			driver.findElement(By.xpath("//a[contains(text(),'Sign in with Google')]")).click();
 			driver.findElement(By.xpath("//a[contains(text(),'Sign in with Google')]")).click();
@@ -40,7 +40,7 @@ public class pdp_Gmail_Sign_UP_5 extends Set{
 			log.info("It's opening the website URL");
 		} 
 		catch (NoSuchElementException popup) {
-		}*/
+		}
 		
 		
 	}
