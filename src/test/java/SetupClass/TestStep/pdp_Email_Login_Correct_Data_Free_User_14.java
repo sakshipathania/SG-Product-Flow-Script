@@ -79,12 +79,17 @@ public class pdp_Email_Login_Correct_Data_Free_User_14 extends Set{
 	public void user_logout_from_website_xiv() throws Throwable {
 		Thread.sleep(1000);
 		try {
-			WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
+			/*WebElement logout = driver.findElement(By.xpath("//a[contains(text(),'Sign Out')]"));
 			if (logout.isEnabled()) {
 				logout.click();
 				Thread.sleep(8000);
 				driver.navigate().refresh();
-				Thread.sleep(2000);
+				Thread.sleep(2000);*/
+			 Thread.sleep(3000);
+		 WebElement sign_out = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.page-wrapper > header > div.header.content > div.panel.wrapper > div > div > ul > li.authorization-link > a")));
+		 Thread.sleep(3000);
+		 sign_out.click();
+		 Thread.sleep(3000);
 			}
 		} catch (NoSuchElementException Ext) {
 			
