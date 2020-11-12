@@ -39,6 +39,13 @@ public class pdp_Facebook_Login_Paid_User_15 extends Set {
 	@Then("^user is redirected to Login page xv$")
 	public void user_is_redirected_to_Login_page_xv() throws Throwable {
 		Thread.sleep(4500);
+		try {
+			driver.findElement(By.cssSelector("div.social-login-authentication-channel:nth-child(3) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();
+			Thread.sleep(2000);
+			log.info("It's opening the website URL");
+		} 
+		catch (NoSuchElementException popup) {
+		}
 	}
 
 	@Then("^User click on sign in with facebook button xv$")
