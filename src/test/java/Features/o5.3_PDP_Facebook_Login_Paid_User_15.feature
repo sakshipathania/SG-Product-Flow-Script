@@ -2,10 +2,7 @@
 Feature: PDP Facebook Login Free User
 Scenario: PDP Facebook Login Free User
 
-Given user is already on pdp page FP xv
-Then User click on Download button to download the product xv
-Then user is redirected to Login page xv
-Then User click on sign in with facebook button xv
-Then user will be redirected to same page  xv
-Then user download the product xv
-Then user logout from website xv
+Given user is already on Home Page old fb
+Then User click on sign in with facebook button old fb
+Then user go to free ppts page old fb
+Then user download a free ppt old fb
