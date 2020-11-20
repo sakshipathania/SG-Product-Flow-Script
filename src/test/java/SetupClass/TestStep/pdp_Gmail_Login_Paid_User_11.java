@@ -76,7 +76,7 @@ public class pdp_Gmail_Login_Paid_User_11 extends Set {
 	    Thread.sleep(2000);
 	    WebElement gmail_pass = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".I0VJ4d > div:nth-child(1) > input:nth-child(1)")));
 	    Thread.sleep(2000);
-	    gmail_pass.sendKeys("Qwerty@1");
+	    gmail_pass.sendKeys("Sakshi@456");
 	    Thread.sleep(2000);
 	    WebElement next_2 = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#passwordNext > div > button > div.VfPpkd-RLmnJb")));
 	    //Thread.sleep(2000);
