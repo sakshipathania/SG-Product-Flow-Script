@@ -57,6 +57,10 @@ public class pdp_Facebook_Login_Paid_User_9 extends Set {
 		    Thread.sleep(2000);
 		    fb_login_btn.click();
 		    Thread.sleep(2000);
+		
+	WebElement privacy =wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#platformDialogForm > div._5lnf.uiOverlayFooter._5a8u > table > tbody > tr > td._51m-.prs.uiOverlayFooterMessage > table > tbody > tr > td._51m-.uiOverlayFooterButtons._51mw > button._42ft._4jy0.layerConfirm._51_n.autofocus._4jy5._4jy1.selected._51sy")));
+                Thread.sleep(3000);
+		privacy.click();
 	}
 
 	@Then("^user will be redirected to same page pdpd ix$")
