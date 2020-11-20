@@ -97,9 +97,10 @@ public class pdp_Facebook_Sign_UP_3 extends Set {
 	public void user_delete_the_account_iii() throws Throwable {
 	  
 
-		 WebElement my_account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
+		 //WebElement my_account = driver.findElement(By.xpath("//a[contains(.,'My Account')]"));
 		Thread.sleep(2300);
-		my_account.click();
+		//my_account.click();
+		driver.get("https://www.slideteam.net/customer/account/");
 		 Thread.sleep(3000);
 		 
 		
