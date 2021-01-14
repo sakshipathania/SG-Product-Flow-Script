@@ -62,33 +62,34 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 
 	@Then("^user enter incorrect details to sign up i$")
 	public void user_enter_incorrect_details_to_sign_up_i() throws Throwable {
+	    Thread.sleep(2000);
+		WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
+	    Thread.sleep(1000);
+	    new_fname_signup.sendKeys("!$#");
 	    
 		Thread.sleep(2000);
-	    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("email_address")));
+	    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
 	    Thread.sleep(1000);
 	    new_email_signup.sendKeys("123@$#!%@.$%q!");
 	    Thread.sleep(2000);
-	    WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
-	    Thread.sleep(1000);
-	    new_fname_signup.sendKeys("!$#");
-	    Thread.sleep(2000);
-	    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
-	    Thread.sleep(1000);
-	    new_lname_signup.sendKeys("254204254");
-	    Thread.sleep(2000);
-	    WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+	    
+	   // WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
+	  //  Thread.sleep(1000);
+	   // new_lname_signup.sendKeys("254204254");
+	   // Thread.sleep(2000);
+	    WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
 	    Thread.sleep(1000);
 	    new_pwd_signup.sendKeys("123456");
 	    Thread.sleep(2000);
-	    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-confirmation")));
+	    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 	    Thread.sleep(1000);
 	    new_pwd1_signup.sendKeys("123456");
 	    Thread.sleep(2000);
-	    WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
+	    WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
 	    Thread.sleep(1000);
 	    new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
 	    Thread.sleep(2000);
-	    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
+	    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 	    Thread.sleep(1000);
 	    new_btn_signup.click();
 	    
@@ -103,27 +104,24 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 		log.info("ERROR MESSAGE IS DISPLAYED IN CONSOLE");
 
 		Thread.sleep(2000);
-	    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("email_address")));
+	    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
 	    Thread.sleep(1000);
 	    new_email_signup.clear();
 	    Thread.sleep(2000);
-	    WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
+	    WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
 	    Thread.sleep(1000);
 	    new_fname_signup.clear();
 	    Thread.sleep(2000);
-	    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
-	    Thread.sleep(1000);
-	    new_lname_signup.clear();
-	    Thread.sleep(2000);
-	    WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+	   
+	    WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
 	    Thread.sleep(1000);
 	    new_pwd_signup.clear();
 	    Thread.sleep(2000);
-	    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-confirmation")));
+	    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 	    Thread.sleep(1000);
 	    new_pwd1_signup.clear();
 	    Thread.sleep(2000);
-	    WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
+	    WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
 	    Thread.sleep(1000);
 	    new_captcha_signup.clear();
 	    Thread.sleep(4000);
@@ -134,7 +132,13 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 	@Then("^user enter new email and correct details to sign up i$")
 	public void user_enter_new_email_and_correct_details_to_sign_up_i() throws Throwable {
 	 
-		//generate new email id  to sign up
+	
+				 WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_name1")));
+					Thread.sleep(2000);
+				    new_fname_signup.sendKeys("Automated Program");
+					Thread.sleep(2000);
+
+				 //generate new email id  to sign up
 				int leftLimit = 97; // letter 'a'
 			    int rightLimit = 122; // letter 'z'
 			    int targetStringLength = 10;
@@ -154,37 +158,26 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 			    System.out.println(full_email);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 				Thread.sleep(2000);
-			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("email_address")));
+			    WebElement new_email_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_email1")));
 				Thread.sleep(2000);
 			    new_email_signup.sendKeys(full_email);
 				Thread.sleep(2000);
-			   
-				
-				 WebElement new_fname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("firstname")));
-					Thread.sleep(2000);
-				    new_fname_signup.sendKeys("Selenium");
-					Thread.sleep(2000);
-
-				    WebElement new_lname_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("lastname")));
-					Thread.sleep(2000);
-				    new_lname_signup.sendKeys("Testing");
-					Thread.sleep(2000);
-					
-					 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
+		
+					 WebElement new_pwd_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password1")));
 						Thread.sleep(2000);
-					    new_pwd_signup.sendKeys("selenium@123");
+					    new_pwd_signup.sendKeys("Geeks@123");
 						Thread.sleep(2000);
 
-					    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("password-confirmation")));
+					    WebElement new_pwd1_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#jform_password2")));
 						Thread.sleep(2000);
-					    new_pwd1_signup.sendKeys("selenium@123");
+					    new_pwd1_signup.sendKeys("Geeks@123");
 						Thread.sleep(2000);
 						
-						WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.id("captcha_user_create")));
+						WebElement new_captcha_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#captchtext")));
 						Thread.sleep(2000);
-					    new_captcha_signup.sendKeys("Aj7W2mtf9namwf55");
+					    new_captcha_signup.sendKeys("Y3Tt6bfwI");
 					    
-					    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".submit")));
+					    WebElement new_btn_signup = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 						Thread.sleep(2000);
 					    new_btn_signup.click();
 						Thread.sleep(2000);
@@ -194,86 +187,21 @@ public class pdp_Email_Sign_UP_Incorrect_Data_1 extends Set {
 	@Then("^user is redirected to pricing page And then user navigates to free ppt page i$")
 	public void user_is_redirected_to_pricing_page_And_then_user_navigates_to_free_ppt_page_i() throws Throwable {
 	
-		// go to free ppt page
-		/*Thread.sleep(2000);
-		WebElement free_ppt_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(.,'Free PPTs')]")));
-		Thread.sleep(2000);
-	    free_ppt_btn.click();
-		Thread.sleep(1000);*/
-		Thread.sleep(5000);
-		Actions actions = new Actions(driver);
-		WebElement free_ppt_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Free Stuff")));
-		actions.moveToElement(free_ppt_btn1).moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Free PPTs')]"))).click().build().perform();
-		Thread.sleep(7000);
-		
-	}
 
-	@Then("^user downloads a free product i$")
-	public void user_downloads_a_free_product_i() throws Throwable {
-	   
-		 
-		//driver.findElement(By.cssSelector("li.product:nth-child(1) > div:nth-child(1) > div:nth-child(2) > strong:nth-child(1) > span:nth-child(1) > a:nth-child(1)")).click();
-		driver.get("https://www.slideteam.net/5-stages-of-the-formal-business-process-powerpoint-templates-ppt-presentation-slides-812.html");
+	driver.get("https://www.slidegeeks.com/free-downloads");
+		Thread.sleep(6000);
+		
+		WebElement Download1= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div/div/div[1]/div/div[2]/div[1]/div/div/p/a/span")));
+		
+		//WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
 		Thread.sleep(3000);
-		WebElement down_load= driver.findElement(By.cssSelector("#clicking"));
-		js.executeScript("arguments[0].scrollIntoView();", down_load);
-		down_load.click();
+		js.executeScript("arguments[0].scrollIntoView();",Download1);
+		Download.click();
 		Thread.sleep(3000);
-	   driver.get("https://www.slideteam.net/");
-	   Thread.sleep(3000);
-		
-	}
-
-	@Then("^user delete the account i$")
-	public void user_delete_the_account_i() throws Throwable {
-	 
-
-		 driver.findElement(By.cssSelector("ul.header > li:nth-child(1) > a:nth-child(1)")).click();
-		 Thread.sleep(3000);
-		 
-		
-
-
-try {
-			WebElement iframe = driver.findElement(By.id("livechat-full-view"));
-			if(iframe.isDisplayed()) {
-				driver.switchTo().frame(iframe);   
-				 Actions act = new Actions(driver);
-				 act.moveToElement(driver.findElement(By.cssSelector("#title .icon-minimize"))).build().perform();
-				 Thread.sleep(2000);
-					WebElement chat1=driver.findElement(By.cssSelector("#title .icon-minimize"));
-					 Thread.sleep(1000);
-						chat1.click();
-						 Thread.sleep(1000);
-						 driver.switchTo().defaultContent();
-						 Thread.sleep(1000);
-						 driver.switchTo().parentFrame();
-					 Thread.sleep(1000);
-			}
-			else {
-				
-
-			System.out.println("chat window does not open");
-			}
-		}
-				catch(NoSuchElementException NCP) {
-					
-				}
-
-
-
-		 WebElement delete_account = driver.findElement(By.xpath("//a[contains(text(),'Delete Account')]"));
-		js.executeScript("arguments[0].scrollIntoView();",delete_account);
-		delete_account.click();
-		 Thread.sleep(3000);
-		 WebElement continue_delete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"deleteaccount-form\"]/button[1]")));
-		js.executeScript("arguments[0].scrollIntoView();",continue_delete); 
-		continue_delete.click();
-		 Thread.sleep(3000);
-		
-		
-	}
-
-
+							
+		WebElement Signout1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href ='/logout']")));
+		Thread.sleep(3000);
+		Signout1.click();
+}
 	
 }
